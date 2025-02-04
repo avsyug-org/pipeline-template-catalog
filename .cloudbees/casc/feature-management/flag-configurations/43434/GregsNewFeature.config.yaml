@@ -23,4 +23,6 @@ conditions:
               id: d4b8b01e-bca7-41bc-5c06-ebba85162ae7
           - group:
               id: a8a810be-88ae-41dc-7d2b-4a889542e732
+          - group:
+              id: 6ed4cbde-383c-4cd7-770e-eabeb8880a76
     flagValue: true
