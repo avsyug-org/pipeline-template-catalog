@@ -10,8 +10,8 @@ labels:
   - label2
 
 availableValues:
-  - 1
-  - 2
-  - 3
+  - 11
+  - 21
+  - 13
 
-isPermanent: false
+isPermanent: true
