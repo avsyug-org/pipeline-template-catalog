@@ -1,0 +1,16 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag
+
+flag: default.headerColor
+flagType: string
+description: ""
+labels:
+
+availableValues:
+  - is-dark
+  - is-primary
+  - is-white
+  - Value written in source cod
+
+isPermanent: false

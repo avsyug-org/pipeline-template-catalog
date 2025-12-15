@@ -1,0 +1,14 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag
+
+flag: Customer migration feature
+flagType: boolean
+description: Please ask Michael before adding customers to this lalalalalalalalalalalalalalala
+labels:
+
+availableValues:
+  - "true"
+  - "false"
+
+isPermanent: false

@@ -1,0 +1,19 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag-configuration
+
+flag: default.headerColor
+
+enabled: true
+
+stickinessProperty: rox.distinct_id
+
+defaultValue: Value written in source cod
+
+conditions:
+  - allOf:
+      - anyOf:
+          - group:
+              name: Logged in Cloudbees
+    flagValue:
+      valueWrittenInCode: true

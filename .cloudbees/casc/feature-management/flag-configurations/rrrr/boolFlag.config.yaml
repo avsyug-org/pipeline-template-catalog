@@ -1,0 +1,24 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag-configuration
+
+flag: boolFlag
+
+enabled: true
+
+stickinessProperty: rox.distinct_id
+
+defaultValue:
+  - percentage: 100
+    option: true
+  - percentage: 0
+    option: false
+
+conditions:
+  - anyOf:
+      - property:
+          name: rox.distinct_id
+          operator: regex
+          operands:
+            - hello
+    flagValue: false

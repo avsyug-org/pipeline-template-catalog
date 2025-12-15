@@ -1,0 +1,18 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag-configuration
+
+flag: numberFlag
+
+enabled: true
+
+stickinessProperty: rox.distinct_id
+
+defaultValue: 6
+
+conditions:
+  - allOf:
+      - property:
+          name: isLoggedIn
+          operator: is-false
+    flagValue: 12

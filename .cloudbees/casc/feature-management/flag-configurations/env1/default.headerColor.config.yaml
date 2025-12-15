@@ -1,0 +1,32 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag-configuration
+
+flag: default.headerColor
+
+enabled: true
+
+stickinessProperty: rox.distinct_id
+
+defaultValue:
+  valueWrittenInCode: true
+
+conditions:
+  - allOf:
+      - anyOf:
+          - group:
+              name: Logged in Cloudbees
+    flagValue:
+      - percentage: 25
+        option: is-dark
+      - percentage: 25
+        option: is-primary
+      - percentage: 25
+        option: is-white
+      - percentage: 25
+        option: Value written in source cod
+  - allOf:
+      - property:
+          name: isLoggedIn
+          operator: is-true
+    flagValue: is-primary

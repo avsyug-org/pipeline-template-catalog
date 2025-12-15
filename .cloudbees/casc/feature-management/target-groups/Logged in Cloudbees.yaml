@@ -1,0 +1,15 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: target-group
+
+name: Logged in Cloudbees
+
+description: Check if user is logged in or cloudbees
+
+conditions:
+  allOf:
+    - property:
+        name: company
+        operator: regex
+        operands:
+            - cloudbees!!!

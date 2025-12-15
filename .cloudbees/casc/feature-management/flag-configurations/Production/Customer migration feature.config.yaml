@@ -1,0 +1,30 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag-configuration
+
+flag: Customer migration feature
+
+enabled: true
+
+stickinessProperty: rox.distinct_id
+
+defaultValue: false
+
+conditions:
+  - allOf:
+      - property:
+          name: company
+          operator: in-array
+          operands:
+            - org-id-for-our-second-favorite-customer
+    flagValue: false
+  - allOf:
+      - property:
+          name: isBetaUser
+          operator: is-true
+    flagValue: true
+  - allOf:
+      - anyOf:
+          - group:
+              name: Logged in Cloudbees
+    flagValue: true

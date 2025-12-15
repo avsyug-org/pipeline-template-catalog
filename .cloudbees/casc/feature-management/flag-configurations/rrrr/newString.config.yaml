@@ -1,0 +1,19 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag-configuration
+
+flag: newString
+
+enabled: true
+
+stickinessProperty: rox.distinct_id
+
+defaultValue:
+  - percentage: 30
+    option: '!!!'
+  - percentage: 36
+    option: '!;lm;l'
+  - percentage: 34
+    option: '!;lm;lfasdfasdfasdf'
+
+conditions: []
